@@ -29,9 +29,7 @@ Acropora        Arborescent, Branching, Caespitose, Corymbose, Digitate, Tabulat
 Porites         Branching, Encrusting, Massive
 Echinopora      Branching, Encrusting, Foliose
 Montipora       Branching, Encrusting, Foliose
-Galaxea         Galaxea, Horizontal
-Hydnopora       Microlobata, Rigida
-Isopora         Brueggemanni, Palifera
+Hydnopora       Massive, Branching
 Merulina        Encrusting, Foliose
 
 Configuring growth forms
@@ -110,17 +108,9 @@ GROWTH_FORM_PRESETS: dict[str, dict[str, list[str]]] = {
         "Encrusting":  ["Monti.encr"],
         "Foliose":     ["Monti.foli"],
     },
-    "Galaxea": {
-        "Galaxea":     ["Galaxea"],
-        "Horizontal":  ["Gal.hor"],
-    },
     "Hydnopora": {
-        "Microlobata": ["Hyd.micro"],
-        "Rigida":      ["Hyd.rigi"],
-    },
-    "Isopora": {
-        "Brueggemanni": ["Iso.brug"],
-        "Palifera":     ["Iso.pali"],
+        "Massive":     ["Hyd.micro"],
+        "Branching":   ["Hyd.rigi"],
     },
     "Merulina": {
         "Encrusting":  ["meru.encru"],

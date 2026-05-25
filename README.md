@@ -211,9 +211,7 @@ fig.savefig("porites_temporal.png", dpi=150)
 | Acropora | Arborescent, Branching, Caespitose, Corymbose, Digitate, Tabulate |
 | Echinopora | Branching, Encrusting, Foliose |
 | Montipora | Branching, Encrusting, Foliose |
-| Galaxea | Galaxea, Horizontal |
-| Hydnopora | Microlobata, Rigida |
-| Isopora | Brueggemanni, Palifera |
+| Hydnopora | Massive, Branching |
 | Merulina | Encrusting, Foliose |
 
 For genera not in the presets, pass a custom `form_map` dict with your own short codes.
