@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "coralnet-temporal"
+version = "1.2.0"
+description = "Temporal and growth-form analysis toolkit for CoralNet percent-cover exports"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [{ name = "Itsar Fuadi", email = "itsarfuadi@gmail.com" }]
+
+keywords = [
+    "coral reef", "benthic monitoring", "CoralNet",
+    "temporal analysis", "growth forms", "coral morphology", "marine ecology",
+]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "scipy>=1.9",
+    "matplotlib>=3.6",
+    "seaborn>=0.12",
+]
+
+[project.optional-dependencies]
+lmm = ["statsmodels>=0.14"]
+dev = [
+    "pytest>=7",
+    "pytest-cov",
+    "black",
+    "ruff",
+    "nbconvert",
+    "jupyterlab",
+    "statsmodels>=0.14",
+]
+
+[project.urls]
+Repository = "https://github.com/itsarnf/coralnet-temporal-analysis"
+Issues     = "https://github.com/itsarnf/coralnet-temporal-analysis/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 90
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 90
+select = ["E", "F", "W", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts   = "--cov=coralnet_temporal --cov-report=term-missing"
